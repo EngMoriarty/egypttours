@@ -32,18 +32,14 @@
 <body onclick="window.location.href='tel:+201102999951';">
     <!-- Your content goes here -->
     
-    <div class="call-button">Call Now</div>
+    <div class="call-button">اتصل الان</div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var background = document.querySelector('body');
-            background.addEventListener('click', function() {
-                window.location.href = 'tel:+201102999951';
-            });
-
             var button = document.querySelector('.call-button');
-            button.addEventListener('click', function() {
-                window.location.href = 'tel:+201102999951';
+
+            button.addEventListener('click', function(event) {
+                event.stopPropagation();
             });
         });
     </script>
